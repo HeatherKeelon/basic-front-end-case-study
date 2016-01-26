@@ -15,7 +15,6 @@ caseStudyApp.service('SelectionService', ['$http', function($http){
         setUserList: function(){
                 $http.get('http://jsonplaceholder.typicode.com/users').then(function(response){
                     userlist = response.data;
-                    console.log("user list in factory", userlist);
                     return userlist;
                 });
             },

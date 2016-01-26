@@ -20,7 +20,6 @@ caseStudyApp.controller('userCtl', ['$scope', '$http', '$location', 'SelectionSe
 
 
     $scope.getUsers();
-    console.log("These are the users ", $scope.users);
 
     //set grid
     var nameTemplate = '<div class="ui-grid-cell-contents select-name" ng-click="grid.appScope.selectUser(row.entity.id)">{{row.entity.name}}';

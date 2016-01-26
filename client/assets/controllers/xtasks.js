@@ -41,8 +41,6 @@ caseStudyApp.controller('taskCtl', ['$scope', '$http', '$location', 'SelectionSe
             fullscreen: useFullScreen
         })
             .then(function(answer){
-                console.log("This is answer", answer);
-                //$scope.status = 'New task ' + answer +  ' submitted.';
                 var taskArray = [];
                 var newId = undefined;
                 for(var i=0; i<$scope.userTasks.length; i++){
@@ -80,8 +78,7 @@ caseStudyApp.controller('taskCtl', ['$scope', '$http', '$location', 'SelectionSe
                 for(var i=0; i<$scope.userTasks.length; i++){
                     $scope.userTasks[i].id = i+1;
                 }
-            }else {
-                console.log("Delete error.");
+
             }
             if($scope.userTasks[0] == undefined){
                 $scope.missing = true;
