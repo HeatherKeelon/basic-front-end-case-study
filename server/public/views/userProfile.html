@@ -1,0 +1,10 @@
+<md-whiteframe class="md-whiteframe-16dp white" flex-sm="520" flex-gt-sm="510" flex-gt-md="500" layout layout-align="center center">
+    <div class="left-float">
+        <span class="task-id">{{info.id}}.</span><span>{{info.title}}</span>
+    </div>
+
+    <div class="right-float">
+        <md-checkbox aria-label="Complete Checkbox" ng-model="info.completed" class="md-warn md-hue-2" type="checkbox" name="completed"></md-checkbox>
+        <md-button class="delete" data-id="{{info.id}}" ng-click="deleteTask(data('id'))">Delete Task</md-button>
+    </div>
+</md-whiteframe>

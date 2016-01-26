@@ -1,0 +1,16 @@
+<md-content class="new-task-box">
+    <h2>Add a New Task</h2>
+    <p>Fill out the form below to add a new task to the task list!</p>
+
+    <form novalidate name="newTaskForm">
+        <div layout-gt-sm="row">
+            <md-input-container class="task-added" flex-gt-sm>
+                <label>Task to Add:</label>
+                <input required ng-model="newTask.title">
+            </md-input-container>
+        </div>
+        <div>
+            <md-button layout="column" flex="auto" class="md-raised md-primary" ng-click="answer(newTask.title)">Add Task</md-button>
+        </div>
+    </form>
+</md-content>

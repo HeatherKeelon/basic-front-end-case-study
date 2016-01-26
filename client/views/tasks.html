@@ -1,0 +1,22 @@
+<header>
+    <h1 class="main-heading">Things To Do:</h1>
+    <h2 class="sub-heading">Tasks</h2>
+</header>
+
+<md-button class="md-primary md-raised task-button" ng-click="addTask($event)" flex="100" flex-gt-md="auto">Add a New Task</md-button>
+<md-button class="md-primary md-raised profile-button" flex="100" flex-gt-md="auto"><a href="#profile">View User's Profile</a></md-button>
+
+<div class="no-profile" ng-show="missing"><h4>This user has no assigned tasks.</h4></div>
+
+<div class="user-tasks" layout="row" layout-padding layout-wrap layout-fill style="padding-bottom: 32px;" ng-cloak ng-repeat="tasks in userTasks">
+    <md-whiteframe class="md-whiteframe-16dp white" flex-sm="90" flex-gt-sm="80" flex-gt-md="70" layout layout-align="center center">
+        <div class="left-float">
+            <span class="task-id">{{tasks.id}}.</span><span>{{tasks.title}}</span>
+        </div>
+
+        <div class="right-float">
+            <md-checkbox aria-label="Complete Checkbox" ng-model="tasks.completed" class="md-warn md-hue-2" type="checkbox" name="completed"></md-checkbox>
+            <md-button class="delete" data-id="{{tasks.id}}" ng-click="deleteTask(tasks.id)">Delete Task</md-button>
+        </div>
+    </md-whiteframe>
+</div>

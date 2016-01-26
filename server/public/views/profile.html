@@ -1,0 +1,37 @@
+<header>
+    <h1 class="main-heading">Things To Do:</h1>
+    <h2 class="sub-heading">User Profile</h2>
+</header>
+
+<div class="frame-box">
+
+<md-whiteframe class="md-whiteframe-16dp profile-frame" flex-sm="90" flex-gt-sm="80" flex-gt-md="70" layout>
+    <div class="profile-box">
+    <div class="profile-left">
+        <h3>{{user}}</h3>
+        <p>Username: {{username}}</p>
+        <p>Phone Number: {{phonenumber | tel}}</p>
+        <p>Email: {{email}}</p>
+        <p>Website: {{website}}</p>
+    </div>
+
+    <div class="profile-right">
+        <div class="profile-right-top">
+            <h4>Address</h4>
+            <p>{{street}}</p>
+            <p>{{suite}}</p>
+            <p>{{city}}</p>
+        </div>
+
+        <div class="profile-right-bottom">
+            <h4>Company</h4>
+            <p>{{company}}</p>
+            <p>{{bs}}</p>
+            <p>{{phrase}}</p>
+        </div>
+        <div class="clear"></div>
+    </div>
+    </div>
+
+</md-whiteframe>
+</div>
